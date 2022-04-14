@@ -82,8 +82,8 @@ public class ScheduleManager {
     }
 
     public static boolean isPreciseAlarmGloballyAllowed(AlarmManager alarmManager){
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S /*Android 12*/)
-            return alarmManager.canScheduleExactAlarms();
+//        if (android.os.Build.VERSION.SDK_INT >= 31 /*android.os.Build.VERSION_CODES.S Android 12*/)
+//            return alarmManager.canScheduleExactAlarms();
         return true;
     }
 

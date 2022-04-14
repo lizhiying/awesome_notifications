@@ -450,8 +450,8 @@ public class PermissionManager {
                 return null;
 
             case PreciseAlarms:
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S /*Android 12*/)
-                    return Manifest.permission.SCHEDULE_EXACT_ALARM;
+                //f (Build.VERSION.SDK_INT >= 31 /*Build.VERSION_CODES.S Android 12*/)
+                //    return Manifest.permission.SCHEDULE_EXACT_ALARM;
                 return null;
 
             case OverrideDnD:
@@ -563,10 +563,10 @@ public class PermissionManager {
     }
 
     private static boolean gotoPreciseAlarmPage(final Context context){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S /*Android 12*/) {
+        if (Build.VERSION.SDK_INT >= 31 /*Android 12*/) {
             final Intent intent = new Intent();
 
-            intent.setAction(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM);
+//            intent.setAction(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM);
             intent.putExtra(Settings.EXTRA_APP_PACKAGE, context.getPackageName());
             intent.setData(Uri.parse("package:" + context.getPackageName()));
 

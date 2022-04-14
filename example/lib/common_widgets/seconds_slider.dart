@@ -38,7 +38,7 @@ class _SecondsSliderState extends State<SecondsSlider> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20.0),
       child: Slider.adaptive(
-          thumbColor: Colors.deepPurple,
+          //thumbColor: Colors.deepPurple,
           inactiveColor: Colors.grey.withOpacity(0.2),
           activeColor: Colors.deepPurple,
           value: _currentValue,

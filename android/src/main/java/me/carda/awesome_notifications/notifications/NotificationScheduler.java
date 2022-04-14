@@ -199,7 +199,8 @@ public class NotificationScheduler extends AsyncTask<String, Void, Calendar> {
                     context,
                     notificationModel.content.id,
                     notificationIntent,
-                    PendingIntent.FLAG_MUTABLE | PendingIntent.FLAG_UPDATE_CURRENT
+//                    PendingIntent.FLAG_MUTABLE |
+                            PendingIntent.FLAG_UPDATE_CURRENT
             );
 
             //scheduleNotificationWithWorkManager(context, notificationModel, nextValidDate);
@@ -299,7 +300,8 @@ public class NotificationScheduler extends AsyncTask<String, Void, Calendar> {
 
             PendingIntent pendingIntent = PendingIntent.getBroadcast(
                     context, id, intent,
-                    PendingIntent.FLAG_MUTABLE | PendingIntent.FLAG_UPDATE_CURRENT );
+//                    PendingIntent.FLAG_MUTABLE |
+                            PendingIntent.FLAG_UPDATE_CURRENT );
 
             AlarmManager alarmManager = ScheduleManager.getAlarmManager(context);
             alarmManager.cancel(pendingIntent);
